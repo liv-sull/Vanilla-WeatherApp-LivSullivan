@@ -46,9 +46,19 @@ function displayTemperature(response) {
   console.log(response.data);
 }
 
-let apiKey = "b6c8908330aoce0f900f83d2e4f0ta35";
-let city = "melbourne";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-console.log(apiUrl);
+function search(city) {
+  let apiKey = "b6c8908330aoce0f900f83d2e4f0ta35";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Melbourne");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
