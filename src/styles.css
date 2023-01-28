@@ -72,3 +72,12 @@ a {
 .source-code {
   font-size: 10px;
 }
+
+.weather-temperature .active {
+  color: #202124;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
