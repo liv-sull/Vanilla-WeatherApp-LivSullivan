@@ -29,8 +29,13 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+small {
+  display: flex;
+}
+
 a {
   text-decoration: none;
+  margin: 0 4px;
 }
 
 .weather-app-wrapper {
