@@ -33,7 +33,7 @@ function displayForecast() {
               <div class="col-2">
                 <div class="weather-forecast-date">${day}</div>
                 <img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                  src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png"
                   alt=""
                   width="42"
                 /><br />
